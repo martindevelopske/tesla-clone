@@ -5,7 +5,53 @@ import { HomeContainer } from '../Styles/HomeStyled'
 function Home() {
   return (
     <HomeContainer>
-        <Section />
+        <Section 
+        title="Model S"
+        desc="Order Online for Touchless Delivery"
+        bg="./images/model-s.jpg"
+        leftBtn="Custom Order"
+        rightBtn="Existing Inventory" />
+
+        <Section 
+        title="Model Y"
+        desc="Order Online for Touchless Delivery"
+        bg="./images/model-y.jpg"
+        leftBtn="Custom Order"
+        rightBtn="Existing Inventory" />
+        <Section 
+        title="Model 3"
+        desc="Order Online for Touchless Delivery"
+        bg="./images/model-3.jpg"
+        leftBtn="Custom Order"
+        rightBtn="Existing Inventory"/>
+        <Section 
+        title="Model x"
+        desc="Order Online for Touchless Delivery"
+        bg="./images/model-x.jpg"
+        leftBtn="Custom Order"
+        rightBtn="Existing Inventory"/>
+        <Section 
+        title="Lowest Cost Solar Panels in America"
+        desc="Money-back guarantee"
+        bg="/images/solar-panel.jpg"
+        leftBtn="Order now"
+        rightBtn="Learn More"
+        />
+        <Section 
+        title="Solar for New Roofs"
+        desc="Solar Roof costs less than a New Roof Solar Panels"
+        bg="/images/solar-roof.jpg"
+        leftBtn="Order now"
+        rightBtn="Learn More"
+        />
+        <Section 
+        title="Accesories"
+        desc=""
+        bg="/images/accessories.jpg"
+        leftBtn="Shop now"
+        
+        />
+        
     </HomeContainer>
     
   )

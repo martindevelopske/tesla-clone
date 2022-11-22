@@ -1,21 +1,28 @@
 import React from 'react'
-import { ButtonGroup, LeftButton, RightButton, SectionContainer, StyledText } from '../Styles/SectionStyled'
+import { ButtonGroup, ButtonsHolder, LeftButton, RightButton, SectionContainer, StyledDownArrow, StyledText } from '../Styles/SectionStyled'
 
-function Section() {
+function Section(props) {
+    const {title,desc,image,bg,leftBtn,rightBtn}=props;
   return (
-    <SectionContainer>
+    <SectionContainer bg={bg}>
         <StyledText>
-            <h1> Model S</h1>
-            <p>Order online for Touches Delivery</p>
+            <h1> {title}</h1>
+            <p>{desc}</p>
         </StyledText>
+        <ButtonsHolder>
         <ButtonGroup>
             <LeftButton>
-                Custom Order
+                {leftBtn}
             </LeftButton>
-            <RightButton>
-                Existing Inventory
-            </RightButton>
+            {rightBtn && <RightButton>
+                {rightBtn}
+            </RightButton>}
         </ButtonGroup>
+        <StyledDownArrow src='/images/down-arrow.svg'>
+
+        </StyledDownArrow>
+        </ButtonsHolder>
+       
     </SectionContainer>
   )
 }
