@@ -6,21 +6,21 @@ function Home() {
   return (
     <HomeContainer>
         <Section 
-        title="Model S"
-        desc="Order Online for Touchless Delivery"
+        title="Model Y"
+        desc="Schedule a Test Drive"
         bg="./images/model-s.jpg"
         leftBtn="Custom Order"
         rightBtn="Existing Inventory" />
 
         <Section 
-        title="Model Y"
-        desc="Order Online for Touchless Delivery"
+        title="Model S"
+        desc="Schedule a Test Drive"
         bg="./images/model-y.jpg"
         leftBtn="Custom Order"
         rightBtn="Existing Inventory" />
         <Section 
-        title="Model 3"
-        desc="Order Online for Touchless Delivery"
+        title="Model X"
+        desc="Schedule a Test Drive"
         bg="./images/model-3.jpg"
         leftBtn="Custom Order"
         rightBtn="Existing Inventory"/>

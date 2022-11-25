@@ -41,7 +41,20 @@ align-items:center;
     margin-right:10px;
     font-weight:500;
     flex-wrap: no-wrap
+}
+@media(max-width:768px){
+    & p{
+        display:none;
+    }
 }`
-export const CustomMenu=styled(MenuIcon)`
+export const CustomMenu=styled.div`
 cursor:pointer;
+width:50px;
+height:25px;
+border-radius:5px;
+color:black;
+background-color: rgb(238, 238, 238);
+display:flex;
+justify-content:center;
+align-items:center;
 `

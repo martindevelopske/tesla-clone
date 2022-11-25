@@ -40,7 +40,7 @@ function Header() {
         <p>
           <a href='/'> Tesla Account</a>
         </p>
-        <CustomMenu onClick={SideToggle}/>
+        <CustomMenu onClick={SideToggle}>Menu</CustomMenu>
       </StyledRightMenu>
       {sideBar && <BurgerNav>
         <StyledCloseIcon onClick={SideToggle}/>

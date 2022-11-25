@@ -26,7 +26,9 @@ transition: transform 0.5s ease-in;
     font-weight:500;
     padding: 0 10px;
 }
-
+@media(max-width:768px){
+    width:70%;
+}
 `
 export const StyledCloseIcon=styled(CloseIcon)`
 position:fixed;

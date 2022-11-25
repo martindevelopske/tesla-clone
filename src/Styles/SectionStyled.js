@@ -15,6 +15,9 @@ align-items:center;
 export const StyledText=styled.div`
 padding-top:15vh;
 text-align: center;
+& p{
+    text-decoration:underline;
+}
 `
 export const ButtonGroup=styled.div`
 display:flex;
