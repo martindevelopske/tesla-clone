@@ -56,5 +56,9 @@ color:black;
 background-color: rgb(238, 238, 238);
 display:flex;
 justify-content:center;
-align-items:center;
+align-items: center;
+display:none;
+@media(max-width:768px){
+    display:flex;
+ }
 `
