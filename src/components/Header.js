@@ -1,29 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Fade } from 'react-reveal';
 import { CustomMenu, HeaderContainer, StyledLogo, StyledMenu, StyledRightMenu } from '../Styles/HeaderStyled'
-import SideBar from './SideBar'
+import { BurgerNav, StyledCloseIcon } from '../Styles/StyledSideBar';
+import {selectCars} from '../app/components/features/car/carSlice'
+import { useSelector } from 'react-redux';
 
 
 function Header() {
+  const [sideBar,setSideBar]= useState(false);
+  const SideToggle= ()=>{
+      if(sideBar){
+          setSideBar(false)
+      } else {
+          setSideBar(true)
+      }
+      console.log(sideBar);
+  }
+  const cars=useSelector(selectCars);
+  console.log(cars);
   return (
     <HeaderContainer>
       <a>
-      
-        <img src='./images/logo.svg' alt="" />
-      
+          <img src='./images/logo.svg' alt="" />
       </a>
       <StyledMenu>
-        <p>
-          <a href='/'> Model S</a>
+        {cars && cars.map((car,index)=> {
+          return(
+            <p key={index}>
+          <a href='/'>{car}</a>
         </p>
-        <p>
-          <a href='/'> Model 3</a>
-        </p>
-        <p>
-          <a href='/'> Model X</a>
-        </p>
-        <p>
-          <a href='/'> Model Y</a>
-        </p>
+          )
+        })}
+      
       </StyledMenu>
       <StyledRightMenu>
          <p>
@@ -32,9 +40,25 @@ function Header() {
         <p>
           <a href='/'> Tesla Account</a>
         </p>
-        <CustomMenu />
+        <CustomMenu onClick={SideToggle}/>
       </StyledRightMenu>
-      <SideBar />
+      {sideBar && <BurgerNav>
+        <StyledCloseIcon onClick={SideToggle}/>
+        {cars && cars.map((car,index)=> {
+          return(
+            <li key={index}> <a href="/">{car}</a></li>
+          )
+        })}
+        <li> <a href="/">Existing Inventory</a></li>
+        <li> <a href="/">Used Inventory</a></li>
+        <li> <a href="/">Trade-In</a></li>
+        <li> <a href="/">Cybertruck</a></li>
+        <li> <a href="/">Roadster</a></li>
+        <li> <a href="/">Semi</a></li>
+        
+        <li> <a href="/">Existing Inventory</a></li>
+    </BurgerNav>
+      }
     </HeaderContainer>
   )
 }
